@@ -1,0 +1,18 @@
+<!--<h1>Pet form </h1>
+<form action="http://localhost/vendor/index.php/create" name="pet" method="post">
+	nome: <input type="text" name="nome" value="" /><br>
+	owner: <input type="text" name="owner" value="" /><br>
+	species: <input type="text" name="species" value="" /><br>
+	sex: <input type="text" name="sex" value="" /><br>
+	birth: <input type="text" name="birth" value="" /><br>
+	<input type="submit" name="salvar" value="salvar"/>
+</form> -->
+<form action="http://localhost/vendor/index.php/pet/create" method="post">
+    {{ form_errors(form) }}<br>
+    {{ form_row(form.nome) }}<br>
+    {{ form_row(form.owner) }}<br>
+    {{ form_row(form.species) }}<br>
+    {{ form_row(form.sex) }}<br>
+    {{ form_row(form.birth) }}<br>
+    <input type="submit" name="submit" />
+</form>
