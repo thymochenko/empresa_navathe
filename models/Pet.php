@@ -112,5 +112,4 @@ class Pet {
     public function getAge() {
         return $this->age;
     }
-
 }
