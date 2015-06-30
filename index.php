@@ -17,11 +17,11 @@ $app['debug'] = true;
 
 $app->register(new Silex\Provider\DoctrineServiceProvider(), [
     'db.options' => [
-        'dbname' => 'Empresa',
-        'user' => 'root',
-        'password' => '01011986',
+        'dbname' => 'navathe_examples',
+        'user' => 'postgres',
+        'password' => '',
         'host' => 'localhost',
-        'driver' => 'pdo_mysql',
+        'driver' => 'pdo_pgsql',
     ],
 ]);
 
@@ -32,7 +32,7 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), [
     'translator.messages' => [],
 ]);
 $app->register(new Silex\Provider\ValidatorServiceProvider());
-
+/*
 $app['domain.repository'] = $app->share(function ($app) {
      $repository['pet'] = new DomainLayer\Repository\PetRepository($app['db']);
      return $repository;
@@ -42,3 +42,4 @@ $app->match('pet/create', 'Menagerie\\PetController::createForm');
 $app->match('pet/age/death/all', 'Menagerie\\PetController::executeDeathAge');
 $app->match('pet/birthday/all/{month}', 'Menagerie\\PetController::executeBirthdaysByMonth');
 $app->run();
+*/
